@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
-	
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.developia.StudentsController">
-	<!-- TODO Add Nodes -->
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.developia.StudentsController">
+   <children>
+      <TextField fx:id="studentName" layoutX="42.0" layoutY="69.0" prefHeight="39.0" prefWidth="196.0" promptText="Student name" />
+      <Button layoutX="181.0" layoutY="344.0" mnemonicParsing="false" onAction="#saveStudent" text="Yadda saxla" textFill="#b20202">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <TextField fx:id="studentSurname" layoutX="251.0" layoutY="69.0" prefHeight="39.0" prefWidth="196.0" promptText="Student surname" />
+      <TextField fx:id="studentPhone" layoutX="42.0" layoutY="131.0" prefHeight="39.0" prefWidth="196.0" promptText="Student phone number" />
+      <DatePicker fx:id="studentBirthday" layoutX="250.0" layoutY="131.0" prefHeight="39.0" prefWidth="196.0" promptText="Student birthday" />
+   </children>
 </AnchorPane>
