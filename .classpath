@@ -17,5 +17,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="MyLibrary/mysql-connector-java-8.0.13.jar"/>
+	<classpathentry kind="lib" path="MyLibrary/controlsfx-11.1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

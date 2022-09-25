@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.control.*?>
@@ -9,15 +10,69 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.developia.StudentsController">
    <children>
-      <TextField fx:id="studentName" layoutX="42.0" layoutY="69.0" prefHeight="39.0" prefWidth="196.0" promptText="Student name" />
-      <Button layoutX="181.0" layoutY="344.0" mnemonicParsing="false" onAction="#saveStudent" text="Yadda saxla" textFill="#b20202">
+      <TextField fx:id="studentName" layoutX="14.0" layoutY="51.0" prefHeight="39.0" prefWidth="218.0" promptText="Student name" />
+      <Button layoutX="14.0" layoutY="206.0" mnemonicParsing="false" onAction="#saveStudent" prefHeight="44.0" prefWidth="154.0" text="Save" textFill="#b20202">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <TextField fx:id="studentSurname" layoutX="251.0" layoutY="69.0" prefHeight="39.0" prefWidth="196.0" promptText="Student surname" />
-      <TextField fx:id="studentPhone" layoutX="42.0" layoutY="131.0" prefHeight="39.0" prefWidth="196.0" promptText="Student phone number" />
-      <DatePicker fx:id="studentBirthday" layoutX="250.0" layoutY="131.0" prefHeight="39.0" prefWidth="196.0" promptText="Student birthday" />
-      <ComboBox fx:id="studentSector" layoutX="42.0" layoutY="193.0" prefHeight="54.0" prefWidth="119.0" promptText="Sector" />
+      <TextField fx:id="studentSurname" layoutX="253.0" layoutY="51.0" prefHeight="39.0" prefWidth="218.0" promptText="Student surname" />
+      <TextField fx:id="studentPhone" layoutX="14.0" layoutY="101.0" prefHeight="39.0" prefWidth="218.0" promptText="Student phone number" />
+      <DatePicker fx:id="studentBirthday" layoutX="253.0" layoutY="101.0" prefHeight="39.0" prefWidth="218.0" promptText="Student birthday" />
+      <ComboBox fx:id="studentSector" layoutX="14.0" layoutY="153.0" prefHeight="39.0" prefWidth="119.0" promptText="Sector" />
+      <MenuBar layoutX="1.0" prefHeight="39.0" prefWidth="500.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+         <effect>
+            <DisplacementMap>
+               <input>
+                  <ColorAdjust />
+               </input>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+      </MenuBar>
+      <TableView fx:id="studentsTable" layoutX="14.0" layoutY="258.0" prefHeight="200.0" prefWidth="474.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="46.0" text="ID" />
+          <TableColumn fx:id="nameColumn" prefWidth="81.0" text="Name" />
+            <TableColumn fx:id="surnameColumn" prefWidth="100.0" text="Surname" />
+            <TableColumn fx:id="birthdayColumn" prefWidth="92.0" text="Birthday" />
+            <TableColumn fx:id="sectorColumn" minWidth="0.0" prefWidth="52.0" text="Sector" />
+            <TableColumn fx:id="phoneColumn" prefWidth="102.0" text="Phone" />
+        </columns>
+      </TableView>
+      <Button layoutX="181.0" layoutY="206.0" mnemonicParsing="false" onAction="#deleteStudent" prefHeight="44.0" prefWidth="139.0" text="Delete" textFill="#b20202">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="338.0" layoutY="206.0" mnemonicParsing="false" onAction="#updateStudent" prefHeight="44.0" prefWidth="139.0" text="Update" textFill="#b20202">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
